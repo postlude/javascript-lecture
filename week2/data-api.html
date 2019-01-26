@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트 위임처리</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .result-container .list-group-item {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div id="alert" class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>아무개씨</strong> 공지사항이 있습니다.
+        </div>
+
+        <h1>자바스크립트 강의</h1>
+    </div>
+    </div>
+    <script>
+        document.addEventListener('click', function(evt){
+            var dismiss = evt.target.dataset.dismiss;
+            console.log(dismiss);
+
+            if(!dismiss) return;
+            var alert = evt.target.closest('.alert');
+            console.log(alert);
+            alert.remove();
+        });
+    </script>
+</body>
+</html>

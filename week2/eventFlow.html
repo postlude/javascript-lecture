@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .box2 {
+            color: #fff;
+            background: #000;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM 이벤트 플로우</h1>
+    <div id="element1" class="box">
+        element1
+        <div id="element2" class="box2">
+            element2
+            <a id="link" href="hello.html">hello</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('element1').addEventListener('click', function(evt){
+            console.log('element1');
+        }, true);// default false(bubbling 단계), true이면 이벤트를 capturing 단계에서 감지해서 cb 실행
+        document.getElementById('link').addEventListener('click', function(evt){
+            evt.preventDefault();
+        });
+        document.getElementById('element2').addEventListener('click', function(evt){
+            console.log(evt.target);
+            console.log('element2');
+            evt.stopPropagation();
+        });
+    </script>
+</body>
+</html>

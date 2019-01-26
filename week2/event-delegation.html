@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container result-container">
+        <h2>게임 결과</h2>
+        <ul id="result-board" class="list-group">
+            <li class="list-group-item">
+                <div>123
+                    <span class="badge">OUT</span>
+                    <button class="pull-right btn btn-danger btn-xs remove-button">x</button>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div>456
+                    <span class="badge">OUT</span>
+                    <button class="pull-right btn btn-danger btn-xs remove-button">x</button>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div>789
+                    <span class="badge">3S</span>
+                    <button class="pull-right btn btn-danger btn-xs remove-button">x</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('result-board').addEventListener('click', function(evt){
+            console.log(evt.target);
+            if(evt.target.className.indexOf('remove-button') < 0){
+                return;
+            }
+            // closest ancestor of the selected elements. (가장 가까운 부모)
+            var resultEl = evt.target.closest('.list-group-item');
+            // console.log(resultEl);
+            resultEl.remove();
+        });
+    </script>
+</body>
+</html>
