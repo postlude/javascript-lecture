@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>어드민</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="/">Admin</a>
+          </div>
+          <ul class="nav navbar-nav">
+              <li>
+                  <a href="/products">Products</a>
+              </li>
+              <li>
+                  <a href="/categories">Categories</a>
+              </li>
+              <li>
+                  <a href="/orders">Orders</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <div class="container" style="margin-top: 50px">
+    <h1>상품목록</h1>
+    <div class="pull-right">
+        <button class="btn btn-primary" onclick="location.href='/admin/products/new'">상품 추가</button>
+    </div>
+    <table class="table table-bordered table-hover">
+      <thead>
+          <tr>
+              <th>아이디</th>
+              <th>이름</th>
+              <th>가격</th>
+              <th>정보</th>
+              <th>평균 별점</th>
+              <th>전체리뷰수</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% products.forEach(p => { %>
+          <tr onclick="location.href = '/products/<%= p.id %>'">
+            <td><%= p.id %></td>
+            <td><%= p.name %></td>
+            <td><%= p.price %></td>
+            <td><%= p.info %></td>
+            <td><%= p.avg_stars %></td>
+            <td><%= p.total_reviews %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
