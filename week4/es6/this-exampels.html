@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// "use strict";
+this === window // this 전역객체를 가리킨다.
+function a() {
+  console.log(this);
+  setTimeout(function() {
+    console.log(this);
+  }, 1000);
+}
+new a();
+var person = {
+  name: 'john',
+  hi: function hi() {
+    console.log(this);
+    console.log(this.name);
+  }
+}
+
+person.hi();
+var hi = person.hi;
+hi.call(person, 1, 2, 3,4);
+hi.apply(person, [1, 2, 3,4]);
+var personHi = hi.bind(person);
+personHi();
+
+
+
+</script>    
+</body>
+</html>
+
+
+
+
+

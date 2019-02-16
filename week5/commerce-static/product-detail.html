@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fastcampus Shop</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="./node_modules/css-spaces/dist/spaces.min.css">
+    <link rel="stylesheet" href="style-new.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="offcanvas offcanvas">
+    <div class="shopping-cart drawer">
+        <div class="cart-header text-center p-s">
+            <a href="#" class="drawer-close navy-link pull-left">
+                <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+            </a>
+            <span class="navy">SHOPPING CART</span>
+            <div class="navy-line"></div>
+        </div>
+        <div class="cart-content">        
+            <ul class="list-unstyled">
+                <li class="cart-item">
+                    <a href="#remove" class="navy-link remove-item">×</a>
+                    <a href="./product-detail.html">
+                        <img width="250" height="250" src="./assets/images/products/item3.jpeg" class="p-s">Note 01
+                    </a>
+                    <span class="quantity">
+                        2 × <span class="price">2000 WON</span>
+                    </span>
+                </li>
+                <li class="cart-item">
+                    <a href="#remove" class="navy-link remove-item">×</a>
+                    <a href="./product-detail.html">
+                        <img width="250" height="250" src="./assets/images/products/item10.jpeg" class="p-s">Note 01
+                    </a>
+                    <span class="quantity">
+                        1 × <span class="price">1000 WON</span>
+                    </span>
+                </li>
+            </ul>
+            <div class="total-section p-s gray-section">
+                <span class="m-0">TOTAL:</span>
+                <h4 class="pull-right m-0">5000</h4>
+            </div>    
+        </div>
+        <div class="cart-footer p-s">
+            <a class="btn btn-lg btn-primary checkout-btn" href="./checkout.html" role="button">Checkout</a>
+        </div>
+    </div>
+    
+    <header class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" role="navigation">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <ul class="list-inline pull-right top-right">
+                                <li class="account-login">
+                                    <span>
+                                        <a href="#" data-toggle="modal" data-target="#login-modal">Log in</a>
+                                        <small>or</small>
+                                        <a href="#" data-toggle="modal" data-target="#signup-modal">Sign Up</a>
+                                    </span>
+                                </li>
+                                <li class="cart">
+                                    <a href="#" class="shopping-cart-btn">
+                                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                        Cart <span class="item-0umber">(3)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container navbar-inner">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">FAST SHOP</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="./index.html">HOME</a></li>
+                        <li class="active"><a class="page-scroll" href="./products.html">PRODUCTS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="gray-bg">
+        <section class="breadcrumb-wrapper mb-l clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="page-title">
+                            <h2>Product Detail</h2>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <ol class="breadcrumb pull-right">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="products.html">Product List</a>
+                            </li>
+                            <li class="active">Product Detail</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container product-info p-l">
+            <div class="row">            
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="media">
+                        <div class="media-left">
+                            <!--<a class="pull-left" href="#">-->
+                                <img class="media-object" src="./assets/images/products/item3.jpeg" alt="Image">
+                            <!--</a>-->
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">Note 01</h2>
+                            <h3>10000</h3>
+                            <p class="mb-l">
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto obcaecati inventore dolorum, itaque repellat ab laudantium aspernatur accusamus ex assumenda harum rerum in quaerat illum dignissimos alias eos soluta ipsum!</span>  
+                                <br>
+                                <span class="product-category mt-xs">
+                                    Category: 
+                                    <a class="navy-link" href="/products.html?categorie=note" rel="tag">Note</a>
+                                </span>
+                            </p>
+                            <div class="btn-area mb-l">
+                                <div class="quantity_select">
+                                    <select name="quantity" title="Qty" class="qty">
+                                        <option value="1" selected="">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                                    </select>
+                                </div>                            
+                                <a href="#" class="btn btn-primary btn-block">Add to cart <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </div>
+                            <div>
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs nav-tabs-alt" role="tablist">
+                                    <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+                                    <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Reviews</a></li>
+                                    <li role="presentation"><a href="#shipping" aria-controls="shipping" role="tab" data-toggle="tab">Shipping</a></li>                                
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="info">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aliquid, aut, pariatur maiores eius blanditiis minus vitae nostrum quidem, dolorem minima rerum ratione. Tenetur assumenda repellat aut, ea animi distinctio.</p>
+                                        <ul>
+                                            <li>Lorem ipsum dolor sit amet</li>
+                                            <li>consectetur adipisicing elit</li>
+                                        </ul>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="review">
+                                        <div class="text-center">
+                                            <p class="h2 text-warning push-10">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <p>
+                                                <strong>5.0</strong>/5.0 out of <strong>5</strong> Ratings
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="shipping">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius repudiandae culpa soluta sit, recusandae nulla veniam exercitationem consequatur ratione accusantium facere vel, magni laudantium, vero non minus quas cupiditate asperiores.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                                            
+            </div>
+        </section>
+        <section class="related-products container mt-m">
+            <div class="row copy">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>Related Products</h1>            
+                </div>
+            </div>
+            <div class="row items">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="img-container">
+                                <img src="assets/images/products/item1.jpeg" alt="">
+                                <div class="img-options">
+                                    <div class="img-options-content">
+                                        <ul class="list-inline btn-group mb-xs" role="group">
+                                            <li><a href="" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="" class="btn btn-default"><i class="fa fa-search"></i></a></li>
+                                        </ul>
+                                        <div class="text-warning">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <span class="text-white">(480)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="content">
+                                <div>
+                                    <h4 class="price pull-right">1000</h4>
+                                    <a href="" class="item-title" href="">Shirt 01</a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container gray-section contact">
+        <div class="row mb-l">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Contact Us</h1>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+        </div>
+        <div class="row mb-l">
+            <div class="col-lg-3 col-lg-offset-3">
+                <address>
+                    <strong><span class="navy">Fastcampus, Inc.</span></strong><br/> 339, Teheran-ro, Gangnam-gu<br/> Seoul,
+                    Republic of Korea<br/>
+                    <abbr title="Phone">P:</abbr> (02) 111-1111
+                </address>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-color">
+                    Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis, totam corporis laboriosam
+                    veritatis, consectetur adipisicing elit quos non quis ad perspiciatis, totam corporis ea,
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                <p class="mt-s">
+                    Or follow us on social platform
+                </p>
+                <ul class="list-inline social-icon">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center mt-l mb-l">
+                <p><strong>&copy; 2017 Fastcampus</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis,
+                    quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade login" id="login-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                
+                </div>
+                <form action="" method="POST" class="form-horizontal p-m" role="form">
+                    <div class="modal-body">
+                        <h4 class="modal-title mb-m">Login</h4>                        
+                        <div class="form-group">
+                            <label for="login-email" class="">EMAIL</label>
+                            <input type="text" id="login-email" name="email" class="form-control email" placeholder="example@gmail.com">                        
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password" class="">PASSWORD</label>
+                            <input type="password" id="login-password" name="email" class="form-control email mb-xxs-sm" placeholder="example@gmail.com">                        
+                            <a href="" class="navy-link">Login Lost your password?</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">                
+                        <button type="button" class="btn btn-primary">Login</button>
+                        <div class="signup-today text-center p-m mt-m">
+                            <p>Don’t have an account?</p>
+                            <a href="" class="navy-link">Sign Up Today</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade login" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                
+                </div>
+                <form action="" method="POST" class="form-horizontal p-m" role="form">
+                    <div class="modal-body">
+                        <h4 class="modal-title mb-m">Sign Up</h4>                        
+                        <div class="form-group">
+                            <label for="signup-email" class="">EMAIL</label>
+                            <input type="text" id="signup-email" name="email" class="form-control email" placeholder="example@gmail.com">                        
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password" class="">PASSWORD</label>
+                            <input type="password" id="signup-password" name="email" class="form-control email mb-xxs-sm" placeholder="example@gmail.com">                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">                
+                        <button type="button" class="btn btn-primary">Sign Up</button>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script src="./products.js"></script>
+    <script src="./drawer.js"></script>
+</body>
+
+</html>

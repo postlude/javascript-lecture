@@ -1,0 +1,11 @@
+{
+    "files": [
+        "src/util.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "compilerOptions": {
+        "outDir": "dist-ts"
+    }
+}

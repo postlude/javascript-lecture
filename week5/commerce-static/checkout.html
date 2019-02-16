@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fastcampus Shop</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="./node_modules/css-spaces/dist/spaces.min.css">
+    <link rel="stylesheet" href="style-new.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="offcanvas offcanvas">
+    <div class="shopping-cart drawer">
+        <div class="cart-header text-center p-xs">
+            <a href="#" class="drawer-close navy-link pull-left">
+                <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
+            </a>
+            <span class="navy">SHOPPING CART</span>
+            <div class="navy-line"></div>
+        </div>
+        <div class="cart-content">        
+            <ul class="list-unstyled">
+                <li class="cart-item">
+                    <a href="#remove" class="navy-link remove-item">×</a>
+                    <a href="./product-detail.html">
+                        <img width="250" height="250" src="./assets/images/products/item3.jpeg" class="p-xs">Note 01
+                    </a>
+                    <span class="quantity">
+                        2 × <span class="price">2000 WON</span>
+                    </span>
+                </li>
+                <li class="cart-item">
+                    <a href="#remove" class="navy-link remove-item">×</a>
+                    <a href="./product-detail.html">
+                        <img width="250" height="250" src="./assets/images/products/item10.jpeg" class="p-xs">Note 01
+                    </a>
+                    <span class="quantity">
+                        1 × <span class="price">1000 WON</span>
+                    </span>
+                </li>
+            </ul>
+            <div class="total-section p-xs gray-section">
+                <span class="m-0">TOTAL:</span>
+                <h4 class="pull-right m-0">5000</h4>
+            </div> 
+        </div>
+        <div class="cart-footer p-xs">
+            <a class="btn btn-lg btn-primary checkout-btn" href="./checkout.html" role="button">Checkout</a>
+        </div>
+    </div>
+    
+    <header class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-scroll" role="navigation">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <ul class="list-inline pull-right top-right">
+                                <li class="account-login">
+                                    <span>
+                                        <a href="#" data-toggle="modal" data-target="#login-modal">Log in</a>
+                                        <small>or</small>
+                                        <a href="#" data-toggle="singup" data-target="#singup-modal">Sign Up</a>
+                                    </span>
+                                </li>
+                                <li class="cart">
+                                    <a href="#" class="shopping-cart-btn">
+                                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                        Cart <span class="item-0umber">(3)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container navbar-inner">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">FAST SHOP</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a class="page-scroll" href="./index.html">HOME</a></li>
+                        <li><a class="page-scroll" href="./products.html">PRODUCTS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="breadcrumb-wrapper container mb-xs clearfix">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="page-title">
+                        <h2>Checkout</h2>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <ol class="breadcrumb pull-right">
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li class="active">Checkout</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="checkout-section container mb-m">
+            <div class="row">                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p-xs">
+                    <h2 class="m-0">Shipping address</h2>
+                    <form action="" class="form-horizontal mt-xs" role="form">                
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label class="control-label">Customer Info</label>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="text" name="firstName" class="form-control" placeholder="Firtst Name">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="text" name="lastName" class="form-control" placeholder="Last Name">    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label class="control-label">Address</label>
+                                </div>                              
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="text" name="state" class="form-control" placeholder="State">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <input type="text" name="city" class="form-control" placeholder="City">    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                    <input type="text" name="address" class="form-control" placeholder="Street Address">
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <input type="text" name="postalCode" class="form-control" placeholder="Postal Code">    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ShippingMemo" class="control-label">Order Notes</label>
+                            <textarea class="form-control" name="ShippingMemo" id="ShippingMemo" cols="20" rows="5" placeholder="Note your order"></textarea>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 p-xs order-panel">
+                    <h2 class="m-0">YOUR ORDER</h2>
+                    <ul class="list-unstyled mb-m">
+                        <li class="cart-item">
+                            <a href="#remove" class="navy-link remove-item">×</a>
+                            <a href="./product-detail.html">
+                                <img width="250" height="250" src="./assets/images/products/item3.jpeg" class="p-xs">Note 01
+                            </a>
+                            <span class="quantity">
+                                2 × <span class="price">2000 WON</span>
+                            </span>
+                        </li>
+                        <li class="cart-item">
+                            <a href="#remove" class="navy-link remove-item">×</a>
+                            <a href="./product-detail.html">
+                                <img width="250" height="250" src="./assets/images/products/item10.jpeg" class="p-xs">Note 01
+                            </a>
+                            <span class="quantity">
+                                1 × <span class="price">1000 WON</span>
+                            </span>
+                        </li>
+                    </ul>                
+                    <div class="navy-line-full"></div>
+                    <div class="total-section p-xs">
+                        <span class="m-0">TOTAL:</span>
+                        <h3 class="pull-right m-0">5000</h3>
+                    </div>
+                    <h2 class="mt-l">PAYMENT</h2>
+                    <form action="" class="form-horizontal" role="form">                
+                        <div class="form-group">
+                            <label class="control-label">Card Number</label>
+                            <input class="form-control" autocomplete="cc-number" name="checkout-cc-number" type="text" placeholder="**** **** **** ****">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Full Name</label>
+                            <input class="form-control" autocomplete="cc-name" name="checkout-cc-name" type="text" placeholder="NAME" autocomplete="cc-name">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">                                                            
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <label class="control-label">MM/YYYY</label>
+                                    <input class="form-control" autocomplete="cc-name" name="checkout-cc-expiry" type="text" placeholder="01/2019" autocomplete="cc-exp">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <label class="control-label">CVC</label>
+                                    <input class="form-control" autocomplete="cc-name" name="checkout-cc-cvc" type="text" placeholder="***" autocomplete="cc-csc">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="mt-l">
+                        <a class="btn btn-lg btn-primary checkout-btn" href="./checkout.html" role="button">Complete Order</a>
+                    </div>                
+                </div>    
+            </div>   
+        </section>
+    </main>
+    <footer class="container gray-section contact">
+        <div class="row mb-m">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Contact Us</h1>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+        </div>
+        <div class="row mb-m">
+            <div class="col-lg-3 col-lg-offset-3">
+                <address>
+                    <strong><span class="navy">Fastcampus, Inc.</span></strong><br/> 339, Teheran-ro, Gangnam-gu<br/> Seoul,
+                    Republic of Korea<br/>
+                    <abbr title="Phone">P:</abbr> (02) 111-1111
+                </address>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-color">
+                    Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis, totam corporis laboriosam
+                    veritatis, consectetur adipisicing elit quos non quis ad perspiciatis, totam corporis ea,
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                <p class="mt-s">
+                    Or follow us on social platform
+                </p>
+                <ul class="list-inline social-icon">
+                    <li><a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center mt-l mb-m">
+                <p><strong>&copy; 2017 Fastcampus</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis,
+                    quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade login" id="login-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                
+                </div>
+                <form action="" method="POST" class="form-horizontal p-m" role="form">
+                    <div class="modal-body">
+                        <h4 class="modal-title mb-m">Login</h4>                        
+                        <div class="form-group">
+                            <label for="login-email" class="">EMAIL</label>
+                            <input type="text" id="login-email" name="email" class="form-control email" placeholder="example@gmail.com">                        
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password" class="">PASSWORD</label>
+                            <input type="password" id="login-password" name="email" class="form-control email mb-xxs-sm" placeholder="example@gmail.com">                        
+                            <a href="" class="navy-link">Login Lost your password?</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">                
+                        <button type="button" class="btn btn-primary">Login</button>
+                        <div class="signup-today text-center p-m mt-m">
+                            <p>Don’t have an account?</p>
+                            <a href="" class="navy-link">Sign Up Today</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade login" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                
+                </div>
+                <form action="" method="POST" class="form-horizontal p-m" role="form">
+                    <div class="modal-body">
+                        <h4 class="modal-title mb-m">Sign Up</h4>                        
+                        <div class="form-group">
+                            <label for="signup-email" class="">EMAIL</label>
+                            <input type="text" id="signup-email" name="email" class="form-control email" placeholder="example@gmail.com">                        
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password" class="">PASSWORD</label>
+                            <input type="password" id="signup-password" name="email" class="form-control email mb-xxs-sm" placeholder="example@gmail.com">                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">                
+                        <button type="button" class="btn btn-primary">Sign Up</button>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <script src="./drawer.js"></script>
+</body>
+
+</html>
