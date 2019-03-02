@@ -1,0 +1,33 @@
+<%- include ../partial/header %>
+<h1>상품목록</h1>
+<div class="pull-right">
+    <button class="btn btn-primary" onclick="location.href='/products/new'">상품 추가</button>
+</div>
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>가격</th>
+        <th>정보</th>
+        <th>평균 별점</th>
+        <th>전체리뷰수</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% products.forEach(p => { %>
+    <tr onclick="location.href = '/products/<%= p.id%>'">
+        <td><%= p.id %></td>
+        <td><%= p.name %></td>
+        <td><%= p.price %></td>
+        <td><%= p.info %></td>
+        <td><%= p.avg_stars %></td>
+        <td><%= p.total_reviews %></td>
+    </tr>
+    <% }); %>
+    </tbody>
+</table>
+</div>
+
+
+<%- include ../partial/footer %>

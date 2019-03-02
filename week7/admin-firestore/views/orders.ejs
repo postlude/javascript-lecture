@@ -1,0 +1,46 @@
+<%- include partial/header %>
+
+<h1>주문 조회</h1>
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>customer</th>
+        <th>items</th>
+        <th>order_note</th>
+        <th>address</th>
+        <th>payment</th>
+        <th>total_price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% orders.forEach(o => { %>
+    <tr>
+        <td>
+            <b>email:</b> <%= o.customer.email %> <br/>
+            <b>TEL:</b> <%= o.customer.phone_number %> <br/>
+            <b>Name:</b> <%= o.customer.first_name %> <%= o.customer.last_name %>
+        </td>
+        <td>
+            <% o.items.forEach(i => { %>
+                <b><%= i.product.name %></b> : <%= i.counts %> 개
+            <% }) %>
+        </td>
+        <td><%= o.order_note %></td>
+        <td>
+            <b>city:</b> <%= o.address.city %> <br/>
+            <b>state:</b> <%= o.address.state %> <br/>
+            <b>post code:</b> <%= o.address.post_code %>
+        </td>
+        <td>
+            <b>card num:</b> <%= o.payment.card_number %> <br/>
+            <b>cvc:</b> <%= o.payment.cvc %> <br/>
+            <b>exp_date:</b> <%= o.payment.exp_date %> <br/>
+            <b>full name:</b> <%= o.payment.full_name %> <br/>
+        </td>
+        <td><%= o.total_price %></td>
+    </tr>
+    <% }); %>
+    </tbody>
+</table>
+
+<%- include partial/footer %>

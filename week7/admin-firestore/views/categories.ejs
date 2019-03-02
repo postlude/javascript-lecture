@@ -1,0 +1,115 @@
+<%- include partial/header %>
+
+<h1>카테고리 목록</h1>
+
+<div class="row">
+    <div class="col-md-6 clearfix">
+        <h2>카테고리 추가</h2>
+        <form>
+            <div class="form-group">
+                <label for="new-category-name">Name</label>
+                <input type="text" class="form-control" id="new-category-name"/>
+            </div>
+        </form>
+        <div class="pull-right">
+            <button id="add-new-category-btn" class="btn btn-primary">Add Category</button>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2>상품 분류</h2>
+        <form>
+            <div class="form-group">
+                <label for="category">Name</label>
+                <select class="form-control" name="category_id" id="selected-category">
+                    <% categories.forEach(c => { %>
+                    <option value="<%= c.id %>"><%= c.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="product">Name</label>
+                <select class="form-control" name="product_id" id="selected-product">
+                    <% products.forEach(p => { %>
+                    <option value="<%= p.id %>"><%= p.name %></option>
+                    <% }); %>
+                </select>
+            </div>
+        </form>
+        <div class="pull-right">
+            <button type="submit" id="add-product-btn" class="btn btn-primary">Add Product</button>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top:30px;">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>products</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% categories.forEach(c => { %>
+            <tr>
+                <td><%= c.name %></td>
+                <td>
+                    <% c.products.forEach(p => { %>
+                    <button type="button" class="btn btn-primary"
+                            onclick="location.href= '/products/<%= p %>'">
+                        <%= p %>
+                        <span class="badge"></span>
+                    </button>
+                    <% }); %>
+                </td>
+            </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+
+    $('#add-product-btn').on('click', function(e) {
+      var category_id = $('#selected-category').val();
+      var product_id = $('#selected-product').val();
+
+      $.ajax({
+        method: 'PUT',
+        url: '/categories/' + category_id + '/products',
+        data: {
+          product_id: product_id
+        },
+        success: function(res) {
+          alert('success to add product.');
+        },
+        error: function(error) {
+          alert(error);
+        }
+      });
+    });
+
+    $('#add-new-category-btn').on('click', function(e) {
+      var category_name = $('#new-category-name').val();
+      $.ajax({
+        method: 'POST',
+        url: '/categories',
+        data: {
+          name: category_name
+        },
+        success: function(res) {
+          alert('success to add new category.');
+        },
+        error: function(error) {
+          alert(error);
+        }
+      });
+    });
+  })
+</script>
+
+
+<%- include partial/footer %>

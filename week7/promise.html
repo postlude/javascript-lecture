@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Promise.all(
+        //     [
+        //         fetch('a.json').then(v => v.json()), fetch('a.json').then(v => v.json())
+        //     ]
+        // ).then((r, r2) => {
+        //     console.log(r, r2);
+        // })
+
+        fetch('http://localhost:3000/products', {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(r => {
+            if(r.status>=200 && r.status<300) {
+                return r;
+            }else {
+                return Promise.reject(new Error(r.statusText));
+            }
+        })
+        .then(v => v.json())
+        .then(console.table)
+        .catch(e => alert(e.message));
+    </script>
+</body>
+</html>
